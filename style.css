@@ -2,6 +2,7 @@
 
 body{
     margin: 0;
+    margin-top: 80px;
     font-family: 'Roboto';
 }
 
@@ -14,8 +15,8 @@ body{
 }
 
 hr{
-    height: 2px;
-    margin: 0 5px;
+    height: 1px;
+    margin: 0;
     padding: 0;
     color: #7a7a7a;
     background-color: #7a7a7a;
@@ -27,6 +28,7 @@ hr{
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    border: solid white 5px;
 }
 
 
@@ -34,8 +36,13 @@ hr{
 /*Header*/
 header {
     display: flex;
-    padding-left: 12%;
-    margin: 1.5%;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 100;
+    background: white;
+    align-items: center;
+    width: 100%;
+    top:0;
 }
 .logo {
     display: inline-block;
@@ -45,13 +52,7 @@ header {
 
 /*Navigation*/
 nav{
-    position: fixed;
-    background: rgba(255,255,255,0.5);
-    top: 0;
-    right: 12%;
-    z-index: 100;
     font-size: 1.5em;
-    border-radius: 0 0 20px 20px
 }
 nav ul {
     list-style: none;
@@ -61,6 +62,7 @@ nav ul {
 }
 nav li{
     padding: 30px;
+    margin: auto;
 }
 nav li:hover{
     border-top: #4494bb 4px solid;
@@ -84,9 +86,9 @@ nav a {
 }
 #slider div {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 10%;
-    max-width: 40%;
+    max-width: 50%;
 }
 #slider em{
     font-style: normal;
@@ -99,11 +101,13 @@ nav a {
     font-size: 0.75em;
     padding: 10px;
     border-radius: 4px;
+}
+#slider button:hover{
     box-shadow: -3px 3px 1px #4494bb;
 }
 #left{
     position: absolute;
-    top: 45%;
+    top: 40%;
     color: white;
     font-size: 0.8em;
     background-color: rgba(0,0,0,0.3);
@@ -120,7 +124,7 @@ nav a {
 }
 #right{
     position: absolute;
-    top: 45%;
+    top: 40%;
     color: white;
     font-size: 0.8em;
     background-color: rgba(0,0,0,0.3);
@@ -146,14 +150,27 @@ nav a {
 #services .separation+p{
     text-align: center;
 }
+.presentationServices{
+    width: 50%;
+}
+.presentationServices aside{
+    flex: 1;
+}
 .details{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding-top: 3%;
     padding-bottom: 5%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.details img{
+    height: 100%;
+    align-self: center;
 }
 .service{
     display: flex;
+    align-items: center;
 }
 .circle2{
     background: #5cadd3;
@@ -194,6 +211,11 @@ nav a {
 
 
 /*Projets*/
+#portfolio{
+    background: #f5f5f5;
+    padding-top: 2%;
+}
+
 #portfolio h2{
     text-align: center;
     font-size: 3em;
@@ -205,6 +227,7 @@ nav a {
 .buttons{
     display: flex;
     justify-content: center;
+    padding: 3%;
 }
 .buttons button{
     font-size: 1em;
@@ -212,6 +235,7 @@ nav a {
     border: none;
     padding: 12px;
     color: #64686d;
+    position: relative;
 }
 .buttons button:hover{
     font-size: 1em;
@@ -221,6 +245,21 @@ nav a {
     color: white;
     border-bottom: solid 4px #4494bb;
 }
+.buttons button:hover:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(92, 173, 211, 0);
+    border-top-color: #4494bb;
+    border-width: 12px;
+    margin-left: -12px;
+}
+
 .buttons button:nth-child(1){
     border-radius: 5px 0px 0px 5px;
 }
@@ -291,8 +330,6 @@ color: white;
 }
 
 
-
-
 /*Contact*/
 #contact{
     position: relative;
@@ -312,6 +349,7 @@ color: white;
 
 #contact iframe{
     width: 100%;
+    border: 0;
 }
 
 .formulaire{
@@ -364,4 +402,105 @@ form input, form textarea{
     padding-bottom: 8px;
     color: white;
     border-bottom: solid 4px #4494bb;
+}
+
+
+@media all and (max-width:1280px){
+    #slider div{
+        max-width: 80%;
+    }
+    
+    #slider{
+        font-size: 1.6em;
+    }
+    
+    .presentationServices {
+    width: 80%;
+    }
+    
+    .image{
+        width: 30%;
+    }
+    
+      .formulaire{
+        width: 30%;;
+    }
+}
+
+@media all and (max-width:959px){
+    #slider div{
+        max-width: 100%;
+        top:10%;
+    }
+    
+    #slider{
+        font-size: 1.2em;
+    }
+    
+    .details{
+        display: block;
+        text-align: center
+    }
+    
+    .presentationServices {
+    width: 100%;
+    }
+    
+    .image{
+        width: 40%;
+    }
+    
+      .formulaire{
+        width: auto;
+    }
+    
+}
+
+@media all and (max-width: 735px){
+      body{
+        margin-top: 150px;
+    }
+     header{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:479px){
+ 
+    nav{
+        font-size: 1em;
+    }
+    #slider div{
+        max-width: 100%;
+    }
+    
+    #slider h1{
+        font-size: 0.5em;
+        margin: 0;
+    }
+    
+    #slider p{
+        font-size: 0.6em;
+    }
+    #slider button{
+        padding: 2px;
+    }
+    
+    .details{
+        display: block;
+        text-align: center
+    }
+    
+    .details img{
+        max-width: 100%;
+    }
+    
+    .presentationServices {
+    width: 100%;
+    }
+    
+    .image{
+        width: 90%;
+    }
 }
