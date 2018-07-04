@@ -101,22 +101,39 @@ nav a {
     border-radius: 4px;
     box-shadow: -3px 3px 1px #4494bb;
 }
-.fa-angle-left{
+#left{
     position: absolute;
     top: 45%;
     color: white;
     font-size: 0.8em;
     background-color: rgba(0,0,0,0.3);
     padding: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: -40px
+}
+.fa-angle-left{
+    position: absolute;
+    right: 25px;
+    top: 33px;
+}
+#right{
+    position: absolute;
+    top: 45%;
+    color: white;
+    font-size: 0.8em;
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    right: -40px
 }
 .fa-angle-right{
     position: absolute;
-    top: 45%;
-    right: 0;
-    color: white;
-    font-size: 0.8em;
-    background-color: rgba(0,0,0,0.3);
-    padding: 20px;
+    left: 25px;
+    top: 33px;
 }
 
 
@@ -216,11 +233,64 @@ nav a {
     justify-content: center;
     padding-bottom: 5%;
 }
-.imgPortfolio img{
+.image{
+    position: relative;
     width: 20%;
-    height: 20%;
     margin: 20px;
 }
+
+.image img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.image figcaption{
+    visibility: hidden;
+position: absolute;
+bottom: 0;
+background: rgba(0,0,0,0.5);
+width: 100%;
+color: white;
+}
+ 
+.image img:hover + figcaption {
+    visibility: visible;
+}
+
+.image .circle1{
+   width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    margin: 15px 15px 15px 0px;
+    background: #5cadd3;
+    top: -47px;
+    right: 0;
+}
+.fa-eye{
+    position: absolute;
+    font-size: 1.7em;
+    color: white;
+    top: 16px;
+    right: 15px;
+}
+
+.image h4{
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-size: 1.4em;
+}
+.image p{
+    padding-left: 20px;
+}
+
+.image figcaption:hover{
+    visibility: visible;
+}
+
+
 
 
 /*Contact*/
