@@ -2,8 +2,14 @@
 
 body{
     margin: 0;
-    margin-top: 80px;
+    margin-top: 84px;
     font-family: 'Roboto';
+}
+
+.block_page{
+    max-width: 1280px;
+    margin: auto;
+    width: 100%;
 }
 
 /*Separation*/
@@ -11,38 +17,46 @@ body{
     margin: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
-hr{
+.separation:before {
+    content: "";
+    left: 0;
+    right: 0;
     height: 1px;
-    margin: 0;
-    padding: 0;
-    color: #7a7a7a;
-    background-color: #7a7a7a;
-    border: 0;
-    width: 100px 
+    background: #7a7a7a;
+    position: absolute;
+    top: calc(50% - 1px);
+    width: 120px;
+    left: calc(50% - 60px);
 }
-.circle{
+.cercle{
     background: #5cadd3;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: solid white 5px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
 
 
 /*Header*/
-header {
-    display: flex;
-    justify-content: space-around;
+header{
     position: fixed;
+    margin: auto;
     z-index: 100;
-    background: white;
-    align-items: center;
     width: 100%;
-    top:0;
+    background-color: white;
+    top: 0;
+}
+.flexContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .logo {
     display: inline-block;
@@ -52,7 +66,7 @@ header {
 
 /*Navigation*/
 nav{
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 nav ul {
     list-style: none;
@@ -61,8 +75,8 @@ nav ul {
     padding: 0;
 }
 nav li{
-    padding: 30px;
     margin: auto;
+    padding: 30px;
 }
 nav li:hover{
     border-top: #4494bb 4px solid;
@@ -75,21 +89,27 @@ nav a {
 
 
 /*Section Slider*/
-#slider{
+#slider {
     position: relative;
     color: white;
-    font-size: 2em;
     padding-bottom: 5%;
     overflow: hidden;
 }
-#slider img{
+.sliderImage{
+    position: relative;
+}
+.sliderImage img{
     width: 100%;
 }
-#slider div {
+.sliderText {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 10%;
     max-width: 50%;
+    font-size: 1.5em;
+}
+.sliderText h1{
+    margin: 0;
 }
 #slider em{
     font-style: normal;
@@ -106,11 +126,11 @@ nav a {
 #slider button:hover{
     box-shadow: -3px 3px 1px #4494bb;
 }
-#left{
+.left{
     position: absolute;
-    top: 40%;
+    top: 50%;
     color: white;
-    font-size: 0.8em;
+    font-size: 1.5em;
     background-color: rgba(0,0,0,0.3);
     padding: 20px;
     border-radius: 50%;
@@ -123,11 +143,11 @@ nav a {
     right: 25px;
     top: 33px;
 }
-#right{
+.right{
     position: absolute;
-    top: 40%;
+    top: 50%;
     color: white;
-    font-size: 0.8em;
+    font-size: 1.5em;
     background-color: rgba(0,0,0,0.3);
     padding: 20px;
     border-radius: 50%;
@@ -145,7 +165,7 @@ nav a {
 /*Section Services*/
 #services h2{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.3em;
     margin: 0;
 }
 #services .separation+p{
@@ -162,18 +182,31 @@ nav a {
     justify-content: space-around;
     padding-top: 3%;
     padding-bottom: 5%;
-    margin-left: 12%;
-    margin-right: 12%;
+    text-align: justify;
 }
 .details img{
-    height: 100%;
+    height: auto;
     align-self: center;
+    max-width: 100%;
 }
 .service{
     display: flex;
     align-items: center;
+    text-align: justify;
 }
-.circle2{
+
+.service p{
+    margin-right: 2em;
+}
+.cercle1{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    position: relative;
+    margin: 15px 15px 15px 0px;
+}
+.cercle2{
     background: #5cadd3;
     width: 15px;
     height: 15px;
@@ -182,14 +215,6 @@ nav a {
     position: absolute;
     right: -10px;
     top: 20px;
-}
-.circle1{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 1px solid gray;
-    position: relative;
-    margin: 15px 15px 15px 0px;
 }
 .fa-cubes, .fa-chart-line, .fa-chart-pie{
     position: absolute;
@@ -201,7 +226,6 @@ nav a {
     right: 20px;
 }
 .fa-cubes{
-
     top: 17px;
     right: 20px;
 }
@@ -216,29 +240,29 @@ nav a {
     background: #f5f5f5;
     padding-top: 2%;
 }
-
 #portfolio h2{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.3em;
     margin: 0;
 }
 #portfolio .separation+p{
     text-align: center;
 }
-.buttons{
+.boutons{
     display: flex;
     justify-content: center;
     padding: 3%;
 }
-.buttons button{
+.boutons button{
     font-size: 1em;
     background: #e5e5e5;
     border: none;
     padding: 12px;
     color: #64686d;
     position: relative;
+    margin: 0;
 }
-.buttons button:hover{
+.boutons button:hover{
     font-size: 1em;
     background: #5cadd3;
     border: none;
@@ -246,7 +270,7 @@ nav a {
     color: white;
     border-bottom: solid 4px #4494bb;
 }
-.buttons button:hover:after {
+.boutons button:hover:after {
     top: 100%;
     left: 50%;
     border: solid transparent;
@@ -260,11 +284,10 @@ nav a {
     border-width: 12px;
     margin-left: -12px;
 }
-
-.buttons button:nth-child(1){
+.boutons button:nth-child(1){
     border-radius: 5px 0px 0px 5px;
 }
-.buttons button:nth-child(4){
+.boutons button:nth-child(4){
     border-radius: 0px 5px 5px 0px;
 }
 .imgPortfolio{
@@ -278,54 +301,42 @@ nav a {
     width: 20%;
     margin: 20px;
 }
-
 .image img{
     width: 100%;
     height: 100%;
     margin: 0;
 }
-
 .image figcaption{
     visibility: hidden;
-position: absolute;
-bottom: 0;
-background: rgba(0,0,0,0.5);
-width: 100%;
-color: white;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    color: white;
 }
- 
 .image img:hover + figcaption {
     visibility: visible;
 }
-
-.image .circle1{
-   width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 3px solid white;
-    position: absolute;
-    margin: 15px 15px 15px 0px;
-    background: #5cadd3;
-    top: -47px;
-    right: 0;
-}
 .fa-eye{
-    position: absolute;
-    font-size: 1.7em;
+    font-size: 1em;
     color: white;
-    top: 16px;
-    right: 15px;
+    border: 2px solid white;
+    position: absolute;
+    background: #5cadd3;
+    right: 10px;
+    padding: 15px;
+    border-radius: 50%;
+    top: calc((-15px / 2) - 1em);
 }
-
 .image h4{
     padding-left: 20px;
     margin-bottom: 0;
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 .image p{
     padding-left: 20px;
+    margin: 0 2px 7px 0;
 }
-
 .image figcaption:hover{
     visibility: visible;
 }
@@ -335,11 +346,9 @@ color: white;
 #contact{
     position: relative;
 }
-
 .map{
     position: relative;
 }
-
 .voile{
     background: rgba(92,173,211,0.3);
     width: 100%;
@@ -347,12 +356,10 @@ color: white;
     z-index: 2;
     position: absolute;
 }
-
 #contact iframe{
     width: 100%;
     border: 0;
 }
-
 .formulaire{
     position: absolute;
     top:12%;
@@ -362,24 +369,20 @@ color: white;
     padding: 2%;
     width: 15%
 }
-
 .formulaire h2{
     margin: 0;
 }
 .formulaire p{
     color: #686c71;
 }
-
 .formulaire em{
     font-style: normal;
     text-decoration: underline dashed;
 }
-
 form{
     display: flex;
     flex-direction: column;
 }
-
 form input, form textarea{
     margin: 10px 0;
     padding: 5px;
@@ -387,141 +390,91 @@ form input, form textarea{
     border: solid 1px #9f9f9f;
     border-radius: 5px;
 }
-
 #envoyer{
     width: 50%;
     font-size: 1em;
-    background: #e5e5e5;
-    border: none;
-    padding: 12px;
-    color: #64686d;
-}
-#envoyer:hover{
-    font-size: 1em;
     background: #5cadd3;
     border: none;
-    padding-bottom: 8px;
+    padding: 12px;
     color: white;
-    border-bottom: solid 4px #4494bb;
+}
+#envoyer:hover{
+   box-shadow: -3px 3px 1px #4494bb;
 }
 
 
-@media all and (max-width:1280px){
-    #slider div{
-        max-width: 80%;
-    }
-    
-    #slider{
-        font-size: 1.6em;
-    }
-    
-    .presentationServices {
-    width: 80%;
-    }
-    
-    .image{
-        width: 30%;
-    }
-    
-      .formulaire{
-        width: 30%;;
-    }
-}
-
-@media all and (max-width:959px){
-    #slider div{
-        max-width: 100%;
-        top:10%;
-    }
-    
-    #slider{
+/*MEDIA QUERIES*/
+@media all and (max-width:1024px){
+    .sliderText {
+        max-width: 60%;
         font-size: 1.2em;
     }
     
     .details{
         display: block;
-        text-align: center
+        text-align: center;
     }
     
-    .presentationServices {
-    width: 100%;
+    .presentationServices{
+        width: auto;
+    }
+    
+    .service{
+        margin-left: 2em;
     }
     
     .image{
         width: 40%;
     }
-    
-      .formulaire{
+
+    .formulaire{
         width: auto;
     }
-    
+
 }
 
-@media all and (max-width: 735px){
-      body{
-        margin-top: 150px;
-    }
-     header{
-        display: block;
-        text-align: center;
-    }
-    nav li{
-        padding: 30px 0;
-    }
-    
-   #slider{
-        font-size: 1em;
-    }
-    
-    #slider h1{
-
-        margin: 0;
-    }
-    
-    #slider p{
-        margin: 0;
-    }
-}
-
-@media all and (max-width:479px){
- 
-    nav{
-        font-size: 1em;
-    }
-    
-    #slider{
-        visibility: hidden;
-    }
-    #slider div{
-        max-width: 100%;
-    }
-    
-    #slider h1{
-        font-size: 0.5em;
-        margin: 0;
-    }
-    
-    #slider p{
-        font-size: 0.6em;
-    }
-    #slider button{
-        padding: 2px;
-    }
-    
-    .details{
+@media all and (max-width: 768px){
+    .flexContent{
         display: block;
         text-align: center
     }
     
-    .details img{
+    .flexContent img{
+        max-width: 50%;
+    }
+    
+    nav li{
+    padding: 2px;
+    }
+    
+    nav li:hover{
+    padding-top: 0px;
+    border-top: #4494bb 2px solid;
+    }
+    
+    .sliderText{
         max-width: 100%;
+        position: initial;
+        color: #7a7a7a;
+        text-align: center;
+        padding-bottom: 2em;
     }
     
-    .presentationServices {
-    width: 100%;
+    .right, .left{
+        top: calc(50% - (2 * 20px));
     }
     
-    .image{
-        width: 90%;
+     .image{
+        width: 60%;
     }
+    
+    .formulaire{
+        position: initial;
+        width: auto;
+    }
+    
+    #envoyer{
+        width: auto;
+    }
+    
 }

@@ -12,171 +12,159 @@
     <body>
         <!-- HEADER -->
         <header>
-            <img src="img/logo.png" alt="logo"/>
-            <nav>
-                <ul>
-                    <li><a href="#slider">Accueil</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="block_page flexContent">
+                <img src="img/logo.png" alt="logo"/>
+                <nav>
+                    <ul>
+                        <li><a href="#slider">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <!--SLIDER-->
         <section id="slider">
-            <img src="img/slider/bg1.jpg" alt="logo"/>
-            <div>
+            <div class="sliderImage">
+                <img src="img/slider/bg1.jpg" alt="logo"/>
+                <span class="left"><i class="fas fa-angle-left"></i></span>
+                <span class="right"><i class="fas fa-angle-right"></i></span>
+            </div>
+            <div class="sliderText">
                 <h1><em>WEBAGENCY</em>: L'AGENCE DE TOUS VOS PROJETS !</h1>
                 <p>Vous avez un projet web ? la WebAgency vous aide à le réaliser !</p>
                 <button>Plus d'infos</button>
             </div>
-            <span id="left"><i class="fas fa-angle-left"></i></span>
-            <span id="right"><i class="fas fa-angle-right"></i></span>
         </section>
         <!--SECTION NOS SERVICES-->
         <section id="services">
-            <h2>NOS SERVICES</h2>
-            <div class="separation">
-                 <hr>
-                <div class="circle"></div>
-                <hr>
-            </div>
-            <p>Nous vous accompagnons dans votre projet afin de vous créez un site sur mesure.</p>
-            <div class="details">
-                <img src="img/main-feature.png" alt="Main Feature"/>
-                <div class="presentationServices">
-                    <div class="service">
-                        <div class="circle1">
-                            <div class="circle2"></div>
-                            <span><i class="fas fa-chart-line"></i></span>
+            <div class="block_page">
+                <h2>NOS SERVICES</h2>
+                <div class="separation">
+                    <div class="cercle"></div>
+                </div>
+                <p>Nous vous accompagnons dans votre projet afin de vous créez un site sur mesure.</p>
+                <div class="details">
+                    <img src="img/main-feature.png" alt="Main Feature"/>
+                    <div class="presentationServices">
+                        <div class="service">
+                            <div class="cercle1">
+                                <div class="cercle2"></div>
+                                <span><i class="fas fa-chart-line"></i></span>
+                            </div>
+                            <aside>
+                                <h3>UX Design</h3>
+                                <p>Nous pensons et concevons votre site web de la meilleur manière possible pour que son utilisation soit optimale. 
+                                 Ainsi, nous nous interessons donc au design de votre site et à l'utilisation qu'en ferons les internautes avant même de 
+                                penser au développement.</p>
+                            </aside>
                         </div>
-                        <aside>
-                            <h3>UX Design</h3>
-                            <p>Nous pensons et concevons votre site web de la meilleur manière possible pour que son utilisation soit optimale. 
-                             Ainsi, nous nous interessons donc au design de votre site et à l'utilisation qu'en ferons les internautes avant même de 
-                            penser au développement.</p>
-                        </aside>
-                    </div>
-                    <div class="service">
-                        <div class="circle1">
-                            <div class="circle2"></div>
-                            <span><i class="fas fa-cubes"></i></span>
+                        <div class="service">
+                            <div class="cercle1">
+                                <div class="cercle2"></div>
+                               <i class="fas fa-cubes"></i>
+                            </div>
+                            <aside>
+                                <h3>UI design</h3>
+                                <p>Nous créons un site à votre image, au design fonctionnel, qui inspire confiance et qui permet aux utilisateurs d'atteindre leur but.</p>
+                            </aside>
                         </div>
-                        <aside>
-                            <h3>UI design</h3>
-                            <p>Nous créons un site à votre image, au design fonctionnel, qui inspire confiance et qui permet aux utilisateurs d'atteindre leur but.</p>
-                        </aside>
-                    </div>
-                    <div class="service">
-                        <div class="circle1">
-                            <div class="circle2"></div>
-                            <span><i class="fas fa-chart-pie"></i></span>
+                        <div class="service">
+                            <div class="cercle1">
+                                <div class="cercle2"></div>
+                                <span><i class="fas fa-chart-pie"></i></span>
+                            </div>
+                            <aside>
+                                <h3>SEO</h3>
+                                <p>Nous mettons en place avec vous une réflexion stratégique et marketing pour votre site web. En optimisant son référencement
+                                    afin qu'il puisse être trouvé de manière simple et efficace, vous créez du travic sur votre site. </p>
+                            </aside>
                         </div>
-                        <aside>
-                            <h3>SEO</h3>
-                            <p>Nous mettons en place avec vous une réflexion stratégique et marketing pour votre site web. En optimisant son référencement
-                                afin qu'il puisse être trouvé de manière simple et efficace, vous créez du travic sur votre site. </p>
-                        </aside>
                     </div>
                 </div>
             </div>
         </section>
         <!--SECTION NOS PROJETS-->
         <section id="portfolio">
-            <h2>NOS PROJETS</h2>
-            <div class="separation">
-                 <hr>
-                <div class="circle"></div>
-                <hr>
-            </div>
-            <p>Vous pouvez voir ici certains de nos projets déjà réalisés.</p>
-            <div class="buttons">
-                <button>Tout voir</button>
-                <button>Création</button>
-                <button>Entreprise</button>
-                <button>Portfolio</button>
-            </div>
-            <div class="imgPortfolio">
-                <figure class="image">
-                    <img src="img/portfolio/01.jpg" alt="01"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>Nariz Optique</h4>
-                        <p>Site vitrine pour un opticien</p>
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <img src="img/portfolio/02.jpg" alt="02"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>Chloé Illustratrice</h4>
-                        <p>Portfolio pour une illustratice freelance</p>
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <img src="img/portfolio/03.jpg" alt="03"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>Retro Coiff'</h4>
-                        <p>Salon de coiffure spécialisé dans les coupes et coiffures rétros</p>
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <img src="img/portfolio/04.jpg" alt="04"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>MAB Consulting</h4>
-                        <p>Société spécialisée dans le conseil aux entreprises</p>
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <img src="img/portfolio/05.jpg" alt="05"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>Crazy Shop</h4>
-                        <p>Boutique de mode en ligne</p>
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <img src="img/portfolio/06.jpg" alt="06"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>Go Tour !</h4>
-                        <p>Agence de Voyage</p>
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <img src="img/portfolio/07.jpg" alt="07"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>Romain Graphiste</h4>
-                        <p>Portfolio pour un graphiste freelance</p>
-                    </figcaption>
-                </figure>
-                <figure class="image">
-                    <img src="img/portfolio/08.jpg" alt="08"/>
-                    <figcaption>
-                        <div class="circle1">
-                            <span><i class="far fa-eye"></i></span>
-                        </div>
-                        <h4>Be Theme Impression</h4>
-                        <p>Impression tous support pour les entreprises</p>
-                    </figcaption>
-                </figure>
+            <div class="block_page">
+                <h2>NOS PROJETS</h2>
+                <div class="separation">
+                    <div class="cercle"></div>
+                </div>
+                <p>Vous pouvez voir ici certains de nos projets déjà réalisés.</p>
+                <div class="boutons">
+                    <button>Tout voir</button>
+                    <button>Création</button>
+                    <button>Entreprise</button>
+                    <button>Portfolio</button>
+                </div>
+                <div class="imgPortfolio">
+                    <figure class="image">
+                        <img src="img/portfolio/01.jpg" alt="01"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>Nariz Optique</h4>
+                            <p>Site vitrine pour un opticien</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img src="img/portfolio/02.jpg" alt="02"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>Chloé Illustratrice</h4>
+                            <p>Portfolio pour une illustratice freelance</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img src="img/portfolio/03.jpg" alt="03"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>Retro Coiff'</h4>
+                            <p>Salon de coiffure spécialisé dans les coupes et coiffures rétros</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img src="img/portfolio/04.jpg" alt="04"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>MAB Consulting</h4>
+                            <p>Société spécialisée dans le conseil aux entreprises</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img src="img/portfolio/05.jpg" alt="05"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>Crazy Shop</h4>
+                            <p>Boutique de mode en ligne</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img src="img/portfolio/06.jpg" alt="06"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>Go Tour !</h4>
+                            <p>Agence de Voyage</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img src="img/portfolio/07.jpg" alt="07"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>Romain Graphiste</h4>
+                            <p>Portfolio pour un graphiste freelance</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="image">
+                        <img src="img/portfolio/08.jpg" alt="08"/>
+                        <figcaption>
+                            <i class="far fa-eye"></i>
+                            <h4>Be Theme Impression</h4>
+                            <p>Impression tous support pour les entreprises</p>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
         <!--SECTION CONTACT-->
