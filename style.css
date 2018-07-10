@@ -1,5 +1,4 @@
 /*GENERAL*/
-
 body{
     margin: 0;
     margin-top: 4.5rem;
@@ -26,8 +25,12 @@ body{
 /*Separation*/
 .separation{
     margin: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 
@@ -63,13 +66,21 @@ header{
     border-bottom: solid 1px #ccc
 }
 .flexContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .logo {
     display: inline-block;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -79,6 +90,8 @@ nav{
 }
 nav ul {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0;
     padding: 0;
@@ -114,7 +127,7 @@ nav a {
     position: absolute;
     top: 20%;
     left: 10%;
-    max-width: 50%;
+    max-width: 55%;
     font-size: 1.5rem;
 }
 .sliderText h1{
@@ -132,7 +145,8 @@ nav a {
     border-radius: 4px;
 }
 #slider button:hover{
-    box-shadow: -3px 3px 1px #4494bb;
+    -webkit-box-shadow: -3px 3px 1px #4494bb;
+            box-shadow: -3px 3px 1px #4494bb;
 }
 .left, .right{
     position: absolute;
@@ -168,37 +182,51 @@ nav a {
     width: 50%;
 }
 .presentationServices aside{
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .details{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-top: 3%;
     padding-bottom: 5%;
     text-align: justify;
 }
 .details img{
     height: auto;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     max-width: 100%;
 }
 .service{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: justify;
 }
 .service p{
     margin-right: 2rem;
 }
-.cercle1{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 1px solid gray;
-    position: relative;
-    margin: 15px 15px 15px 0px;
+
+.fa-cubes, .fa-chart-line, .fa-chart-pie{
+  font-size: 2rem;
+  color: #5cadd3;
+  border: 1px solid gray;
+  position: relative;
+  padding: 20px;
+  border-radius: 50%;
+margin: 15px 15px 15px 0;
 }
-.cercle2{
+
+.cercle2 {
     background: #5cadd3;
     width: 15px;
     height: 15px;
@@ -206,24 +234,7 @@ nav a {
     border: solid white 5px;
     position: absolute;
     right: -10px;
-    top: 20px;
-}
-.fa-cubes, .fa-chart-line, .fa-chart-pie{
-    position: absolute;
-    font-size: 2rem;
-    color: #5cadd3;
-}
-.fa-chart-line{
-    top: 20px;
-    right: 20px;
-}
-.fa-cubes{
-    top: 17px;
-    right: 20px;
-}
-.fa-chart-pie{
-    top: 17px;
-    right: 16px;
+    top: calc(50% - 10px);
 }
 
 
@@ -233,8 +244,12 @@ nav a {
     padding-top: 2%;
 }
 .boutons{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 3%;
 }
 .boutons button{
@@ -271,9 +286,14 @@ nav a {
     border-radius: 0px 5px 5px 0px;
 }
 .imgPortfolio{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-bottom: 5%;
 }
 .image{
@@ -332,7 +352,7 @@ nav a {
 .voile{
     background: rgba(92,173,211,0.3);
     width: 100%;
-    height: 700px;
+    height: 750px;
     z-index: 2;
     position: absolute;
 }
@@ -347,7 +367,7 @@ nav a {
     z-index: 2;
     background: rgba(255,255,255, 0.8);
     padding: 2%;
-    width: 25%
+    width: 20%
 }
 .formulaire h2{
     margin: 0;
@@ -357,11 +377,17 @@ nav a {
 }
 .formulaire em{
     font-style: normal;
-    text-decoration: underline dashed;
+    -webkit-text-decoration: underline dashed;
+            text-decoration: underline dashed;
 }
 form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 form input, form textarea{
     margin: 10px 0;
@@ -379,7 +405,8 @@ form input, form textarea{
     color: white;
 }
 #envoyer:hover{
-   box-shadow: -3px 3px 1px #4494bb;
+   -webkit-box-shadow: -3px 3px 1px #4494bb;
+           box-shadow: -3px 3px 1px #4494bb;
 }
 
 
